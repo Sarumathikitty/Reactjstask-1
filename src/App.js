@@ -1,5 +1,4 @@
 import React from "react";
-//import KeyboardEventHandler from "react-keyboard-event-handler";
 const App = () => {
   const [first, setfirst] = React.useState("");
   const [last, setlast] = React.useState("");
@@ -98,8 +97,7 @@ const App = () => {
           <input type="radio" value="Can't say" name="" /> Cant't say
           </div>
         
-        </div>
-  
+        </div>  
         <label>Choice of Food</label>
         <div className="status">
         <div value={food} 
@@ -145,7 +143,8 @@ const App = () => {
               </button>
               </div>
         </form>
-      </div>
+      </div>      
+      {arr==""? <h1>NO DATA FOUND</h1>:
       <div className="rightside">
         <table className="sty1">
           <tr>
@@ -169,14 +168,16 @@ const App = () => {
                       <td>{data.state}</td>
                     </tr>
                   );
-                })}
+                })}                
               </tbody>
-            </table>
-          </div>
-          </div>
+            </table>  
+      
+              </div> }
+                                
+      </div>     
         
       )
-    
+                       
   };
   
   
